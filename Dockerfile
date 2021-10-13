@@ -12,6 +12,7 @@ RUN dotnet publish --no-restore -c Release -o /app
 
 FROM base AS final
 WORKDIR /app
+EXPOSE 80
 COPY --from=publish /app .
 # Padrão de container ASP.NET
 # ENTRYPOINT ["dotnet", "CarterAPI.dll"]
