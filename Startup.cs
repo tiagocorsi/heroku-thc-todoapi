@@ -19,6 +19,7 @@ namespace TodoApi
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            Console.WriteLine(configuration.GetConnectionString("Default")); ///temp
         }
 
         public IConfiguration Configuration { get; }
