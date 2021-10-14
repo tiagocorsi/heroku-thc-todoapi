@@ -30,7 +30,7 @@ deploy:
   needs: test
   if: success() && github.ref == 'refs/heads/main'
 
-steps:
+  steps:
     - uses: actions/checkout@v2
     - name: App Settings Variable Substitution
       uses: microsoft/variable-substitution@v1
